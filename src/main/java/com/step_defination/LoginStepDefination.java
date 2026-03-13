@@ -1,9 +1,5 @@
 package com.step_defination;
 
-
-
-import javax.xml.xpath.XPath;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
