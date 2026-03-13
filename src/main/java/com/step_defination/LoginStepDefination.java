@@ -23,7 +23,6 @@ public class LoginStepDefination {
 	
 	@Given("open browser")
 	public void open_browser() {
-		log.info("open");
 	    driver.get("https://practicetestautomation.com/practice-test-login/");
 	}
 	
@@ -43,7 +42,6 @@ public class LoginStepDefination {
 		String actualText = driver.findElement(By.cssSelector("#loop-container > div > article > div.post-header > h1")).getText();
 		System.out.println(actualText);
 		if(expectedText.equals(actualText)) {
-			System.out.println("inside if");
 			driver.findElement(By.xpath("//*[@id=\"loop-container\"]/div/article/div[2]/div/div/div/a")).click();
 		}
 	}
