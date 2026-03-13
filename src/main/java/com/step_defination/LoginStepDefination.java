@@ -27,7 +27,7 @@ public class LoginStepDefination {
 	    driver.get("https://practicetestautomation.com/practice-test-login/");
 	}
 	
-	@When("enter valid {string} and {string}")
+	@When("enter username {string} and  password {string}")
 	public void enter_valid_username_and_password(String username, String password) {
 	    driver.findElement(By.name("username")).sendKeys(username);
 	    driver.findElement(By.id("password")).sendKeys(password);
@@ -48,9 +48,15 @@ public class LoginStepDefination {
 		}
 	}
 	
+	@Then("error message should be displayed {string}")
+	public void error_message_should_be_displayed(String expectedText) {
+	     String actualText =  driver.findElement(By.xpath("//*[@id='error']")).getText();
+	     Assert.assertEquals(expectedText, actualText);
+	}
+	
 	@And("broswer should close")
 	public void broswer_should_close() {
-	    Hooks.tearDown();d
+	    Hooks.tearDown();
 	}
 
 

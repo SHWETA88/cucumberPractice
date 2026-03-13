@@ -11,7 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 		glue={"com.step_defination","com.hooks"},
 		dryRun = false,
 		monochrome = true,
-		plugin = {"pretty","html:target/cucumber-report.html"}
+		plugin = {"pretty","html:target/cucumber-report.html"},
+		tags = "@smoke"
 		)
 public class LoginRunner {
 	
